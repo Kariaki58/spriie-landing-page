@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import MotionDiv from "./motion-div";
 import { Card } from "@/components/ui/card";
 
 const formSchema = z.object({
@@ -38,13 +37,13 @@ export default function WaitlistForm() {
   return (
     <section className="py-20 lg:py-32 bg-background">
       <div className="container mx-auto px-4">
-        <MotionDiv className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto text-center">
           <h2 className="font-headline text-4xl md:text-5xl font-bold text-primary">Be First. Win Big.</h2>
           <p className="mt-4 font-body text-lg text-foreground/70">
             The first users will be the biggest winners on Spriie. Sign up to get early access and unlock exclusive perks.
           </p>
-        </MotionDiv>
-        <MotionDiv className="mt-12 max-w-xl mx-auto">
+        </div>
+        <div className="mt-12 max-w-xl mx-auto">
           <Card className="p-6 sm:p-8 border-2 border-primary/20 shadow-xl bg-card rounded-xl">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -80,7 +79,7 @@ export default function WaitlistForm() {
               </form>
             </Form>
           </Card>
-        </MotionDiv>
+        </div>
       </div>
     </section>
   );

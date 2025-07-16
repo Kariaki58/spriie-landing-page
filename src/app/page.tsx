@@ -1,3 +1,4 @@
+import MotionWrapper from '@/components/landing/motion-wrapper';
 import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
 import HowItWorks from '@/components/landing/how-it-works';
@@ -14,14 +15,24 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
-        <HowItWorks />
-        <TrustSection />
-        <MultiSeller />
-        <SocialProof />
-        <div id="waitlist">
+        <MotionWrapper>
+          <HowItWorks />
+        </MotionWrapper>
+        <MotionWrapper>
+          <TrustSection />
+        </MotionWrapper>
+        <MotionWrapper>
+          <MultiSeller />
+        </MotionWrapper>
+        <MotionWrapper>
+          <SocialProof />
+        </MotionWrapper>
+        <MotionWrapper id="waitlist">
           <WaitlistForm />
-        </div>
-        <Newsletter />
+        </MotionWrapper>
+        <MotionWrapper>
+          <Newsletter />
+        </MotionWrapper>
       </main>
       <Footer />
     </div>
