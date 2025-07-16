@@ -8,6 +8,7 @@ import WaitlistForm from '@/components/landing/waitlist-form';
 import Newsletter from '@/components/landing/newsletter';
 import SocialProof from '@/components/landing/social-proof';
 import Footer from '@/components/landing/footer';
+import ForSellers from '@/components/landing/for-sellers';
 
 export default function Home() {
   return (
@@ -23,6 +24,9 @@ export default function Home() {
         </MotionWrapper>
         <MotionWrapper>
           <MultiSeller />
+        </MotionWrapper>
+        <MotionWrapper>
+          <ForSellers />
         </MotionWrapper>
         <MotionWrapper>
           <SocialProof />

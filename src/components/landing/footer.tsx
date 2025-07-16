@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Linkedin, Twitter, Youtube } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -7,7 +8,9 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h1 className="font-headline text-3xl font-bold text-primary">Spriie</h1>
+            <Link href="/">
+                <Image src="/spriie-logo.png" alt="Spriie Logo" width={120} height={40} />
+            </Link>
             <p className="font-body text-sm text-foreground/70">Buy with truth, not just ads.</p>
           </div>
           <div>
