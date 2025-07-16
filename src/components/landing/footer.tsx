@@ -13,17 +13,17 @@ export default function Footer() {
           <div>
             <h4 className="font-headline font-semibold">Platform</h4>
             <ul className="mt-4 space-y-2 font-body text-sm">
-              <li><Link href="#how-it-works" className="text-foreground/80 hover:text-primary">How It Works</Link></li>
-              <li><Link href="#trust" className="text-foreground/80 hover:text-primary">Trust</Link></li>
-              <li><Link href="#sellers" className="text-foreground/80 hover:text-primary">For Sellers</Link></li>
+              <li><Link href="/#how-it-works" className="text-foreground/80 hover:text-primary">How It Works</Link></li>
+              <li><Link href="/#trust" className="text-foreground/80 hover:text-primary">Trust</Link></li>
+              <li><Link href="/#sellers" className="text-foreground/80 hover:text-primary">For Sellers</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-headline font-semibold">Company</h4>
             <ul className="mt-4 space-y-2 font-body text-sm">
-              <li><Link href="#" className="text-foreground/80 hover:text-primary">About Us</Link></li>
-              <li><Link href="#waitlist" className="text-foreground/80 hover:text-primary">Join Waitlist</Link></li>
-              <li><Link href="#" className="text-foreground/80 hover:text-primary">Contact</Link></li>
+              <li><Link href="/about" className="text-foreground/80 hover:text-primary">About Us</Link></li>
+              <li><Link href="/#waitlist" className="text-foreground/80 hover:text-primary">Join Waitlist</Link></li>
+              <li><Link href="/contact" className="text-foreground/80 hover:text-primary">Contact</Link></li>
             </ul>
           </div>
           <div>
@@ -38,8 +38,8 @@ export default function Footer() {
         <div className="mt-12 border-t pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-foreground/60 font-body">
           <p>&copy; {new Date().getFullYear()} Spriie. All rights reserved.</p>
           <div className="flex space-x-4 mt-4 sm:mt-0">
-            <Link href="#" className="hover:text-primary">Privacy Policy</Link>
-            <Link href="#" className="hover:text-primary">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-primary">Terms of Service</Link>
           </div>
         </div>
       </div>
