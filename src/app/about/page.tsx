@@ -3,8 +3,8 @@ import Footer from '@/components/landing/footer';
 import MotionDiv from '@/components/landing/motion-div';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Users, Target, Handshake } from 'lucide-react';
-import Image from 'next/image';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import AiImage from '@/components/ai-image';
 
 const teamMembers = [
   { name: 'Alex Johnson', role: 'Founder & CEO', avatar: 'AJ', imageHint: 'ceo portrait' },
@@ -30,9 +30,8 @@ export default function AboutPage() {
             <div className="container mx-auto px-4">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
                     <MotionDiv>
-                        <Image 
-                            src="https://placehold.co/600x400.png"
-                            data-ai-hint="team collaboration"
+                        <AiImage 
+                            prompt="team collaboration"
                             alt="Our Team"
                             width={600}
                             height={400}
@@ -96,7 +95,13 @@ export default function AboutPage() {
                 <MotionDiv key={member.name}>
                   <Card className="text-center p-6">
                     <Avatar className="w-24 h-24 mb-4 mx-auto border-4 border-primary/20">
-                      <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint={member.imageHint} />
+                      <AiImage
+                        prompt={member.imageHint}
+                        alt={member.name}
+                        width={100}
+                        height={100}
+                        isAvatar={true}
+                       />
                       <AvatarFallback>{member.avatar}</AvatarFallback>
                     </Avatar>
                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>

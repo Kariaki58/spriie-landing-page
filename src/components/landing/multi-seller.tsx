@@ -3,17 +3,18 @@
 import MotionDiv from "./motion-div";
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
+import AiImage from "../ai-image";
 
 const sellers = [
-  { name: "TechNova", score: 98, category: "Electronics", avatar: "TN", imageHint: "modern tech" },
-  { name: "Artisan Crafts", score: 95, category: "Handmade", avatar: "AC", imageHint: "artisan workshop" },
-  { name: "EcoWear", score: 99, category: "Fashion", avatar: "EW", imageHint: "sustainable fashion" },
-  { name: "Gourmet Pantry", score: 92, category: "Food", avatar: "GP", imageHint: "gourmet food" },
-  { name: "Homebody", score: 96, category: "Decor", avatar: "HB", imageHint: "cozy home decor" },
-  { name: "FitLife", score: 94, category: "Fitness", avatar: "FL", imageHint: "fitness gear" },
+  { name: "TechNova", score: 98, category: "Electronics", avatar: "TN", imageHint: "modern tech logo" },
+  { name: "Artisan Crafts", score: 95, category: "Handmade", avatar: "AC", imageHint: "artisan workshop logo" },
+  { name: "EcoWear", score: 99, category: "Fashion", avatar: "EW", imageHint: "sustainable fashion logo" },
+  { name: "Gourmet Pantry", score: 92, category: "Food", avatar: "GP", imageHint: "gourmet food logo" },
+  { name: "Homebody", score: 96, category: "Decor", avatar: "HB", imageHint: "cozy home decor logo" },
+  { name: "FitLife", score: 94, category: "Fitness", avatar: "FL", imageHint: "fitness gear logo" },
 ];
 
 export default function MultiSeller() {
@@ -35,7 +36,13 @@ export default function MultiSeller() {
                     <Card className="transform transition-transform hover:-translate-y-2 duration-300 rounded-xl">
                       <CardContent className="flex flex-col items-center text-center p-6">
                         <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                          <AvatarImage src={`https://placehold.co/100x100.png`} data-ai-hint={seller.imageHint} />
+                           <AiImage
+                            prompt={seller.imageHint}
+                            alt={seller.name}
+                            width={100}
+                            height={100}
+                            isAvatar={true}
+                           />
                           <AvatarFallback>{seller.avatar}</AvatarFallback>
                         </Avatar>
                         <h3 className="font-headline text-xl font-bold">{seller.name}</h3>

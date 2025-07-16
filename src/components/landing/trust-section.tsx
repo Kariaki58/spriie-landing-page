@@ -4,7 +4,7 @@ import MotionDiv from "./motion-div";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Clock, Star } from "lucide-react";
-import Image from "next/image";
+import AiImage from "../ai-image";
 
 const trustFeatures = [
   {
@@ -56,10 +56,9 @@ export default function TrustSection() {
                 <CardTitle className="font-headline text-lg">Case Study: The Perfect Camera</CardTitle>
               </CardHeader>
               <CardContent>
-                <Image
-                  src="https://placehold.co/600x400.png"
+                <AiImage
+                  prompt="professional photo of a modern camera on a table"
                   alt="Camera review"
-                  data-ai-hint="camera review"
                   width={600}
                   height={400}
                   className="rounded-lg mb-4"

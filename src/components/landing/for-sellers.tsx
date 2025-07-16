@@ -4,8 +4,8 @@ import MotionDiv from "./motion-div";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { BadgeCheck, BarChart, Users } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
+import AiImage from "../ai-image";
 
 const features = [
     {
@@ -66,9 +66,8 @@ export default function ForSellers() {
             </MotionDiv>
              <MotionDiv className="flex items-center justify-center">
                 <Card className="p-4 rounded-xl shadow-2xl transform transition-transform hover:scale-105 duration-300">
-                    <Image
-                        src="https://placehold.co/600x700.png"
-                        data-ai-hint="happy business owner"
+                    <AiImage
+                        prompt="happy business owner looking at laptop"
                         alt="A happy seller using Spriie"
                         width={600}
                         height={700}

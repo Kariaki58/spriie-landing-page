@@ -1,8 +1,9 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import MotionDiv from "./motion-div";
+import AiImage from "../ai-image";
 
 const testimonials = [
   {
@@ -10,21 +11,21 @@ const testimonials = [
     name: "Sarah L.",
     role: "Early Adopter",
     avatar: "SL",
-    imageHint: "happy woman",
+    imageHint: "happy woman face",
   },
   {
     quote: "As a seller, Spriie lets me connect with customers authentically. My content does the selling, not aggressive ads.",
     name: "Michael B.",
     role: "Verified Seller",
     avatar: "MB",
-    imageHint: "small business owner",
+    imageHint: "small business owner portrait",
   },
   {
     quote: "The trust score system is brilliant. It makes it so easy to find reliable sellers in a sea of options. I'm hooked!",
     name: "Jessica P.",
     role: "Power Shopper",
     avatar: "JP",
-    imageHint: "smiling person",
+    imageHint: "smiling person face",
   },
 ];
 
@@ -47,7 +48,13 @@ export default function SocialProof() {
                 </CardContent>
                 <div className="flex items-center mt-6">
                   <Avatar>
-                    <AvatarImage src={`https://placehold.co/40x40.png`} data-ai-hint={testimonial.imageHint} />
+                    <AiImage
+                      prompt={testimonial.imageHint}
+                      alt={testimonial.name}
+                      width={40}
+                      height={40}
+                      isAvatar={true}
+                     />
                     <AvatarFallback>{testimonial.avatar}</AvatarFallback>
                   </Avatar>
                   <div className="ml-4">
