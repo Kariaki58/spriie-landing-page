@@ -52,8 +52,8 @@ const AnimatedBackground = () => {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = 'hsla(221, 83%, 53%, 0.3)';
-        ctx.strokeStyle = 'hsla(221, 83%, 53%, 0.3)';
+        ctx.fillStyle = 'hsla(151, 70%, 40%, 0.3)';
+        ctx.strokeStyle = 'hsla(151, 70%, 40%, 0.3)';
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
