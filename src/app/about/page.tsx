@@ -7,9 +7,9 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import Image from 'next/image';
 
 const teamMembers = [
-  { name: 'Alex Johnson', role: 'Founder & CEO', avatar: 'AJ', imageHint: '/profile-1.jpg' },
-  { name: 'Maria Garcia', role: 'Head of Product', avatar: 'MG', imageHint: '/profile-2.webp' },
-  { name: 'Sam Lee', role: 'Lead Engineer', avatar: 'SL', imageHint: 'profile-3.webp' },
+  { name: 'Stephen Kariaki', role: 'Founder & CEO', avatar: 'AJ', imageHint: '/profile.jpeg' },
+  { name: 'Maria Garcia', role: 'Head of Product', avatar: 'MG', imageHint: '/spriie.jpeg' },
+  { name: 'Amina Isme', role: 'Lead Engineer', avatar: 'SL', imageHint: '/member.jpeg' },
 ];
 
 export default function AboutPage() {
@@ -97,14 +97,12 @@ export default function AboutPage() {
                   <Card className="text-center p-6">
                     <Avatar className="w-24 h-24 mb-4 mx-auto border-4 border-primary/20">
                       <Image
-                        // prompt={member.imageHint}
-                        src=""
+                        src={member.imageHint}
                         alt={member.name}
                         width={100}
                         height={100}
-                        // isAvatar={true}
-                       />
-                      <AvatarFallback>{member.avatar}</AvatarFallback>
+                      />
+                      {/* <AvatarFallback>{member.avatar}</AvatarFallback> */}
                     </Avatar>
                     <h3 className="font-headline text-xl font-bold">{member.name}</h3>
                     <p className="font-body text-primary">{member.role}</p>

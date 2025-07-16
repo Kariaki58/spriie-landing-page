@@ -30,10 +30,10 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeInOut" }}
         >
           <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground">
-            Buy With <span className="text-primary">Truth</span>, Not Just Ads
+            Buy With <span className="text-primary">Trust</span>, Not Just Ads
           </h1>
           <p className="mt-6 max-w-3xl mx-auto font-body text-lg md:text-xl text-foreground/80">
-            Spriie is the content-first e-commerce platform that empowers you with honest reviews, trusted sellers, and content that builds truth.
+            Spriie is the content-first e-commerce platform that empowers you with honest reviews, trusted sellers, and content that builds trust.
           </p>
           <motion.div
             className="mt-10"

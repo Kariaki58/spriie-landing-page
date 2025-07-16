@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <Link href="/">
-                <Image src="/spriie-logo.png" alt="Spriie Logo" width={120} height={40} />
+                <Image src="/sprii-logo-dark.png" alt="Spriie Logo" width={120} height={40} />
             </Link>
-            <p className="font-body text-sm text-foreground/70">Buy with truth, not just ads.</p>
+            <p className="font-body text-sm text-foreground/70">Buy with Trust, not just ads.</p>
           </div>
           <div>
             <h4 className="font-headline font-semibold">Platform</h4>
