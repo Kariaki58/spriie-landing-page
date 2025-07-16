@@ -27,7 +27,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center">
-             <Image src="/spriie-logo.png" alt="Spriie Logo" width={120} height={40} />
+             <Image src="/sprii-logo-dark.png" alt="Spriie Logo" width={120} height={40} />
           </Link>
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="#how-it-works" onClick={handleScroll} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">

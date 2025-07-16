@@ -6,15 +6,15 @@ import { Progress } from "@/components/ui/progress";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Badge } from "@/components/ui/badge";
-import AiImage from "../ai-image";
+import Image from "next/image";
 
 const sellers = [
-  { name: "TechNova", score: 98, category: "Electronics", avatar: "TN", imageHint: "modern tech logo" },
-  { name: "Artisan Crafts", score: 95, category: "Handmade", avatar: "AC", imageHint: "artisan workshop logo" },
-  { name: "EcoWear", score: 99, category: "Fashion", avatar: "EW", imageHint: "sustainable fashion logo" },
-  { name: "Gourmet Pantry", score: 92, category: "Food", avatar: "GP", imageHint: "gourmet food logo" },
-  { name: "Homebody", score: 96, category: "Decor", avatar: "HB", imageHint: "cozy home decor logo" },
-  { name: "FitLife", score: 94, category: "Fitness", avatar: "FL", imageHint: "fitness gear logo" },
+  { name: "TechNova", score: 98, category: "Electronics", avatar: "TN", imageHint: "/logo-1.jpeg" },
+  { name: "Artisan Crafts", score: 95, category: "Handmade", avatar: "AC", imageHint: "/logo-2.jpg" },
+  { name: "EcoWear", score: 99, category: "Fashion", avatar: "EW", imageHint: "/logo-3.avif" },
+  { name: "Gourmet Pantry", score: 92, category: "Food", avatar: "GP", imageHint: "/logo-4.avif" },
+  { name: "Homebody", score: 96, category: "Decor", avatar: "HB", imageHint: "/logo-5.jpg" },
+  { name: "FitLife", score: 94, category: "Fitness", avatar: "FL", imageHint: "/logo-6.webp" },
 ];
 
 export default function MultiSeller() {
@@ -36,12 +36,12 @@ export default function MultiSeller() {
                     <Card className="transform transition-transform hover:-translate-y-2 duration-300 rounded-xl">
                       <CardContent className="flex flex-col items-center text-center p-6">
                         <Avatar className="w-24 h-24 mb-4 border-4 border-primary/20">
-                           <AiImage
-                            prompt={seller.imageHint}
+                           <Image
+                            src={seller.imageHint}
                             alt={seller.name}
                             width={100}
                             height={100}
-                            isAvatar={true}
+                            // isAvatar={true}
                            />
                           <AvatarFallback>{seller.avatar}</AvatarFallback>
                         </Avatar>

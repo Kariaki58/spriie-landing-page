@@ -25,13 +25,34 @@ export default function WaitlistForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values); 
-    toast({
-      title: "You're on the list! 🎉",
-      description: "Thanks for joining the waitlist. We'll be in touch soon.",
-    });
-    form.reset();
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Failed to join waitlist");
+      }
+
+      toast({
+        title: "You're on the list! 🎉",
+        description: "Thanks for joining the waitlist. We'll be in touch soon.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to join waitlist",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
